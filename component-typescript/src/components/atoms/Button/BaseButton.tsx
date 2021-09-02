@@ -1,7 +1,8 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import React from 'react';
 
-import { css,jsx, SerializedStyles } from '@emotion/react';
+import { css, jsx, SerializedStyles } from '@emotion/react';
 
 export interface ButtonProps {
   text: string,
@@ -10,7 +11,7 @@ export interface ButtonProps {
   ghost?: boolean,
   fullWidth?: boolean,
   minWidth?: string,
-  isUploadFileButton: SerializedStyles,
+  isUploadFileButton?: SerializedStyles,
   customStyle? : SerializedStyles,
 
 }
@@ -18,11 +19,11 @@ export interface ButtonProps {
 interface ButtonColor {
   baseColor: string,
   textColor: string,
-  borderColor: string,
+  borderColor?: string,
   ghostColor: string,
   ghostTextColor: string,
   hoverColor: string,
-  hoverBorderColor: string,
+  hoverBorderColor?: string,
   focusColor: string,
 }
 
@@ -120,3 +121,4 @@ const BaseButton: React.FC<BaseButtonProps>=({
   );
 };
 export default BaseButton;
+
