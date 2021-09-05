@@ -1,7 +1,6 @@
 
 const GoTop = (props) => {
   // /DISPLAY HANDLER
-  console.log("props", props.showGoTop);
   return (
     <>
       <button  className={props.showGoTop} onClick={props.scrollUp}>
