@@ -1,7 +1,7 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
+import {jsx, css, SerializedStyles } from '@emotion/core';
 import React from 'react';
-import { css, jsx, SerializedStyles } from '@emotion/core';
-
 import Add from 'components/atoms/Icon/Add';
 import Analize from 'components/atoms/Icon/Analize';
 import Arrow from 'components/atoms/Icon/Arrow';
