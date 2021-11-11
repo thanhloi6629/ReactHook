@@ -9,10 +9,7 @@ const bubbleSort2 = (array) => {
   let isOrdered = false;
   for (let i = 0; i < array.length; i++) {
     isOrdered = false
-    console.log("i", i);
     for (let x = 0; x < array.length - 1 - i; x++) {
-      console.log("x", x);
-      console.log("isOrdered", isOrdered);
       if (array[x] > array[x + 1]) {
         [array[x], array[x + 1]] = [array[x + 1], array[x]];
         //Nhu vay cung dc
@@ -24,7 +21,6 @@ const bubbleSort2 = (array) => {
     // Nếu không có phần tử nào để hoán đổi
     // bên trong vòng lặp thì Break
     if (isOrdered === false) break;
-    console.log("array2", array);
   }
   return array;
 }
