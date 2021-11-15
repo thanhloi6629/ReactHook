@@ -1,15 +1,18 @@
+/* eslint-disable react/require-default-props */
+import React, { ReactElement } from 'react';
 import { StyleProps } from 'types/StyleProps';
-import React, { Fragment } from 'react';
 
-type ImageProps = {
+type TmageProps = {
   src: string;
-  alt: string;
-  styleProps: StyleProps;
+  alt?: string | undefined;
+  styleProps?: StyleProps | undefined;
 };
-const main = () => (
-  <>
-    loi
-  </>
-);
+const styles = {
+  with: '100%',
+  height: '100%',
+  objectfit: 'covert',
+};
 
-export default main;
+const Image: React.FC<TmageProps> = ({ src, alt = '', styleProps = {} }): ReactElement<HTMLImageElement> => <img src={src} alt={alt} style={{ ...styles, ...styleProps }} />;
+
+export default Image;

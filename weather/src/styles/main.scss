@@ -1,0 +1,16 @@
+@import 'modules/all';
+@import 'layout/all';
+@import 'state/all';
+@import 'pages/all';
+@import 'base/all';
+
+
+.Wrapper{
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  line-height: 1.6;
+  position: relative
+}
