@@ -1,3 +1,4 @@
+import FixedFirstColumTable from 'Pages/Table/FixedFirstColumTable';
 import React from 'react';
 import './App.css';
 
@@ -6,7 +7,8 @@ function App() {
 
   return (
     <div className="App">
-      Loi dep trai
+      <div>Table Scroll</div>
+      <FixedFirstColumTable></FixedFirstColumTable>
     </div>
   );
 }

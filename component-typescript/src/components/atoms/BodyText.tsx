@@ -16,7 +16,6 @@ const hoverStyle = (color: string) => css({
   }
 });
 
-console.log("chay bodytext");
 
 const BodyText:React.FC<{
   size?: keyof FontSize;
