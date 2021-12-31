@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { isMacOs, isMobile, isMobileOnly } from 'react-device-detect';
+import { isMacOs } from 'react-device-detect';
 import {minuteOptions} from 'utility/dateUtil';
 
  const FixedFirstColumTable = () => {
@@ -413,32 +413,79 @@ import {minuteOptions} from 'utility/dateUtil';
             </thead>
             <tbody>
               {
-                operationReport?.map((item: any) => (
-                  <tr>
-                    <td
-                      className={item.targetDay !== '' ? 'stickyStyle fristColSticky' : 'text-center stickyStyle fristColSticky'}
-                      style={{ top: '0', left: '0', zIndex: 95 }}
-                    >
-                      {item.targetDay !== '' ? item.targetDay : '合計'}
-                    </td>
-                    <td className="text-right pr-10 stickyStyle">{item.maleCount ? item.maleCount : 0}</td>
-                    <td className="text-right pr-10 stickyStyle">{item.womanCount}</td>
-                    <td className="text-right pr-10 stickyStyle">{item.sexTotalCount}</td>
-                    <td className="text-right pr-10 stickyStyle bgGray" />
-                    <td className="text-right pr-10 stickyStyle">{item.firstCount}</td>
-                    <td className="text-right pr-10 stickyStyle">{item.secondCount}</td>
-                    <td className="text-right pr-10 stickyStyle">{item.thirdCount}</td>
-                    <td className="text-right pr-10 stickyStyle">{item.regularCount}</td>
-                    <td className="text-right pr-10 stickyStyle">{item.visitNumCount}</td>
-                    <td className="text-right pr-10 stickyStyle bgGray" />
-                    <td className="text-right pr-10 stickyStyle">{item.unaccountCount}</td>
-                    <td className="text-right pr-10 stickyStyle">{item.priceTotal}</td>
+                operationReport.slice(0, operationReport.length - 1)?.map((item: any) => (
+                  // <tr>
+                  //   <td
+                  //     className={item.targetDay !== '' ? 'stickyStyle fristColSticky' : 'text-center stickyStyle fristColSticky'}
+                  //     style={{ top: '0', left: '0', zIndex: 95 }}
+                  //   >
+                  //     {item.targetDay !== '' ? item.targetDay : '合計'}
+                  //   </td>
+                  //   <td className="text-right pr-10 stickyStyle">{item.maleCount ? item.maleCount : 0}</td>
+                  //   <td className="text-right pr-10 stickyStyle">{item.womanCount}</td>
+                  //   <td className="text-right pr-10 stickyStyle">{item.sexTotalCount}</td>
+                  //   <td className="text-right pr-10 stickyStyle bgGray" />
+                  //   <td className="text-right pr-10 stickyStyle">{item.firstCount}</td>
+                  //   <td className="text-right pr-10 stickyStyle">{item.secondCount}</td>
+                  //   <td className="text-right pr-10 stickyStyle">{item.thirdCount}</td>
+                  //   <td className="text-right pr-10 stickyStyle">{item.regularCount}</td>
+                  //   <td className="text-right pr-10 stickyStyle">{item.visitNumCount}</td>
+                  //   <td className="text-right pr-10 stickyStyle bgGray" />
+                  //   <td className="text-right pr-10 stickyStyle">{item.unaccountCount}</td>
+                  //   <td className="text-right pr-10 stickyStyle">{item.priceTotal}</td>
 
-                  </tr>
+                  // </tr>
+
+                   <tr>
+                   <td
+                     className={'stickyStyle fristColSticky'}
+                     style={{ top: '0', left: '0', zIndex: 95 }}
+                   >
+                     { item.targetDay}
+                   </td>
+                   <td className="text-right pr-10 stickyStyle">{item.maleCount ? item.maleCount : 0}</td>
+                   <td className="text-right pr-10 stickyStyle">{item.womanCount}</td>
+                   <td className="text-right pr-10 stickyStyle">{item.sexTotalCount}</td>
+                   <td className="text-right pr-10 stickyStyle bgGray" />
+                   <td className="text-right pr-10 stickyStyle">{item.firstCount}</td>
+                   <td className="text-right pr-10 stickyStyle">{item.secondCount}</td>
+                   <td className="text-right pr-10 stickyStyle">{item.thirdCount}</td>
+                   <td className="text-right pr-10 stickyStyle">{item.regularCount}</td>
+                   <td className="text-right pr-10 stickyStyle">{item.visitNumCount}</td>
+                   <td className="text-right pr-10 stickyStyle bgGray" />
+                   <td className="text-right pr-10 stickyStyle">{item.unaccountCount}</td>
+                   <td className="text-right pr-10 stickyStyle">{item.priceTotal}</td>
+
+                 </tr>
                 ))
               }
 
             </tbody>
+            <tfoot>
+            {operationReport.slice(operationReport.length-1).map((item: any) => (
+                  <tr>
+                    <td
+                      className={'text-center fristColSticky stickyStyle tfoodSticky '}
+                      style={{ bottom: '0', left: '0', zIndex: 95, position: 'sticky' }}
+                    >
+                       合計
+                    </td>
+                    <td className="text-right pr-10 stickyStyle stickyStyle tfoodSticky ">{item.maleCount ? item.maleCount : 0}</td>
+                    <td className="text-right pr-10 stickyStyle stickyStyle tfoodSticky">{item.womanCount}</td>
+                    <td className="text-right pr-10 stickyStyle tfoodSticky">{item.sexTotalCount}</td>
+                    <td className="text-right pr-10 stickyStyle tfoodSticky bgGray" />
+                    <td className="text-right pr-10 stickyStyle tfoodSticky">{item.firstCount}</td>
+                    <td className="text-right pr-10 stickyStyle tfoodSticky">{item.secondCount}</td>
+                    <td className="text-right pr-10 stickyStyle tfoodSticky">{item.thirdCount}</td>
+                    <td className="text-right pr-10 stickyStyle tfoodSticky">{item.regularCount}</td>
+                    <td className="text-right pr-10 stickyStyle tfoodSticky">{item.visitNumCount}</td>
+                    <td className="text-right pr-10 stickyStyle tfoodSticky bgGray" />
+                    <td className="text-right pr-10 stickyStyle tfoodSticky">{item.unaccountCount}</td>
+                    <td className="text-right pr-10 stickyStyle tfoodSticky">{item.priceTotal}</td>
+
+                  </tr>
+                ))}
+            </tfoot>
           </table>
         </div>
     )

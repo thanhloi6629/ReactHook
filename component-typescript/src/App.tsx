@@ -1,5 +1,5 @@
-import FixedFirstColumTable from 'Pages/Table/FixedFirstColumTable';
 import React from 'react';
+import FixedFirstColumTable from 'Pages/Table/FixedFirstColumTable';
 import './App.css';
 
 function App() {

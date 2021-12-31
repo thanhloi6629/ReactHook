@@ -48,7 +48,8 @@
 .periodSalesTable .table-bordered>thead>tr>th,
 .periodSalesTable .table-bordered>tbody>tr>th,
 .periodSalesTable .table-bordered>thead>tr>td,
-.periodSalesTable .table-bordered>tbody>tr>td{
+.periodSalesTable .table-bordered>tbody>tr>td,
+.periodSalesTable .table-bordered>tfoot>tr>td{
   border: 1px solid #222d32;
 }
 
@@ -98,11 +99,26 @@
   position: sticky;
   top: 0;
 }
+/* .templateNewTable table tfoot {
+  position: sticky;
+  bottom: 0;
+} */
+
+
+.periodSalesTable.newDesignTable table tfoot tr td {
+  position: sticky;
+  bottom: 0;
+}
+
 
 .periodSalesTable.newDesignTable.nobackground table tr td{
   background-color: #fff; 
 }
-.periodSalesTable.newDesignTable.nobackground table>tbody>tr:last-child td{
+/* .periodSalesTable.newDesignTable.nobackground table>tbody>tr:last-child td{
+  background-color:  #DDDDDD;
+} */
+
+.periodSalesTable.newDesignTable.nobackground table>tfoot>tr td{
   background-color:  #DDDDDD;
 }
 .periodSalesTable.newDesignTable.nobackground table>tr td:last-child{
