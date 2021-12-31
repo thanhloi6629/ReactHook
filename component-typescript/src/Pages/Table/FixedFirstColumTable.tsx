@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react'
 import { isMacOs, isMobile, isMobileOnly } from 'react-device-detect';
+import {minuteOptions} from 'utility/dateUtil';
 
  const FixedFirstColumTable = () => {
     const operationReport = [
@@ -385,6 +386,7 @@ import { isMacOs, isMobile, isMobileOnly } from 'react-device-detect';
 
     const tblRows = useMemo(() => ['日付', '男性', '女性', '計', '', '初回', '2回目', '3回目', '常連', '計', '', '回数', '金額'], []);
 
+    console.log("minuteOptions", minuteOptions);
 
     return (
         <div
@@ -393,7 +395,7 @@ import { isMacOs, isMobile, isMobileOnly } from 'react-device-detect';
             height: 'auto', minHeight: '10%', padding: isMacOs ? '35px' : '0px', maxHeight: 'calc(100vh - 300px)'
           }}
         >
-          <table className="table table-bordered text-nowrap" id="periodSales">
+          <table className="table table-bordered">
             <thead>
               <tr>
                 {tblRows.map((item: any, index: any) => (

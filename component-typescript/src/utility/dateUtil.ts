@@ -23,3 +23,15 @@ export const numberFormater = (num: any) => {
   }
   return formatter.format(num);
 };
+
+
+export const minuteOptions = Array(60)
+.fill(1)
+.map((item, index) => ({
+  label: index.toLocaleString("en-US", { minimumIntegerDigits: 2 }),
+  value: index.toLocaleString("en-US", { minimumIntegerDigits: 2 }),
+}));
+//[{label: '00', value: '00'},{label: '01', value: '01'}, {label: '02', value: '02'},..., {label: '59', value: '59'}]
+//  cach 2
+const monthsToShow = Array.from({ length: 60 }, (_, i) => (i))
+.map((item, indexa) => ({ label: String(item).padStart(2, '0'), value: String(item).padStart(2, '0') }));
