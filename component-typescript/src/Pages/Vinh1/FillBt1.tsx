@@ -19,35 +19,48 @@ function FillBt1() {
         {name: '8',code: 'B',value: 'data'},
         ]
 
-        const fillTable2 = mock
-        console.log(mock,'check mock')
-
-    const header = fillTable.map((item) => item.code);
-    console.log("header", header);
-//     const = ['C', 'A', 'D', 'B', 'H', 'F', 'E', 'G', 'B'];
-//     const data = [{
-//         name:'1', '', '', 'data', '','G',
-//     },
-//     {
-//         name:'2', '', '', 'data', '','G', 'h',
-//     }
-// ,]
-    let body = [];;
+    const fillterheader = fillTable.map((item) => item.code).sort((a,b)=> a > b ? 1: a < b ? -1 : 0);
     
-   const a = fillTable.map((item, index) => {
-        
-         body.push(item);
-        if(item.name === '' ){
-            console.log("hjeh");
-            
-        }
-        return (
-            <div>Loideptrai</div>
-        )
-    })
+    const header = fillterheader.filter((item, index) => fillterheader.indexOf(item) == index)
+
+    const fillterbody = fillTable.map((item)=> item.name).sort((a, b) => Number(a)-Number(b));
+    const body= fillterbody.filter((item, index) => fillterbody.indexOf(item) == index)
+ 
+ const result = (rowIndex: any, colIndex: any) => {
+    const result = fillTable.find((i) => i.name === rowIndex  && i.code === colIndex);
+    return result?.value
+ }
     return (
-        <div>
-            
+        <div className=''>
+           <table>
+               <thead>
+                   <tr>
+                       <th rowSpan={2}>Cot</th>
+                       <th colSpan={header.length}></th>
+                   </tr>
+                   <tr>
+                   {header.map((item) => (
+                        <th>{item}</th>
+                       ))}
+                   </tr>
+               </thead>
+               <tbody>
+                    {body.map((itemRow) =>
+                        <tr>
+                            <td>{itemRow}</td>
+                            {header.map((itemCol, index) => (
+                                <td>
+                                    <div onClick={() => console.log(itemRow, itemCol, index)}>
+                                    {result(itemRow,itemCol)}                     
+                                    </div>  
+                                </td>
+                            ))}
+                        </tr>
+                    )}
+                   
+               </tbody>
+           </table>
+          
         </div>
     )
 }
