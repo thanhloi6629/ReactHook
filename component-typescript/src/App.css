@@ -204,12 +204,32 @@
 } */
 
 
-/* Table  */
-table tr td,
-table tr th{
+/* Table 1 2 */
+
+.BT1 table, .BT2 table {
+  border-collapse: collapse;
+  overflow: auto;
+
+}
+
+.py-2{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.BT1 table tr td,
+.BT1 table tr th,
+.BT2 table tr td,
+.BT2 table tr th {
   min-width: 100px;
   width: 100px;
   height: 50px;
   border: 1px solid black;
+}
+.stickyStyle{
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: wheat;
 }
 
