@@ -387,7 +387,8 @@ import {minuteOptions} from 'utility/dateUtil';
     const tblRows = useMemo(() => ['日付', '男性', '女性', '計', '', '初回', '2回目', '3回目', '常連', '計', '', '回数', '金額'], []);
 
     console.log("minuteOptions", minuteOptions);
-
+    console.log(" operationReport.length - 1",  operationReport.length - 1);
+    
     return (
         <div
           className="periodSalesTable newDesignTable nobackground"

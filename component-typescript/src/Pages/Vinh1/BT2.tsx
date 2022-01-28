@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { numberFormater } from 'utility/dateUtil';
 import listArray from './mockup.json';
 
 interface Iheader {
@@ -116,7 +117,7 @@ const BT2 = () => {
     console.log("listArray", listArray);
     console.log("header", header);
     
-
+    
     
     return (
         <div className='BT2 py-2' style={{overflow: 'auto', width:'1300px',maxWidth:'1300px'}}>

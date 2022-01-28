@@ -34,12 +34,16 @@ export const productColor = {
   primaryHoverText: "#3145D1",
   primaryP10: "#0B4087",
   primaryP20: "#0A3878",
-  primaryP30: "#007BC3",
+  primaryP30: '#093168',
   primaryM95: "#F2F5F9",
   primaryM90: "#E7ECF4",
   primaryM80: "#E7F1FD",
   // セカンダリ
   secondary: "#ED5D5D",
+  secondaryP10: '#BC4863',
+  secondaryP20: '#A74058',
+  secondaryP30: '#91374C',
+
   secondaryHover: "#e44242",
 
   editAction: "#22AEE5",
