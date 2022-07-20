@@ -233,3 +233,56 @@
   background-color: wheat;
 }
 
+/* BT3 */
+.container {
+  display: grid;
+  height: 100vh;
+  grid-gap: 10px;
+  grid-template-areas: 
+    "header"
+    "aside"
+    "main"
+    "section"
+    "footer";
+  grid-template-rows: 1fr 1fr 1fr 10fr 1fr;
+}
+
+@media (min-width: 400px) {
+  .container {
+    grid-template-areas: 
+      "header header header"
+      "aside section main"
+      "footer footer footer";
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+}
+
+.container > * {
+  background-color: dodgerblue;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header {
+  grid-area: header;
+}
+
+section {
+  grid-area: section;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main{
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}

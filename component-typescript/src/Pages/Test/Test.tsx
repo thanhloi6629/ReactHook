@@ -55,10 +55,12 @@ const Test = () =>{
     console.log("test", test);
     
     React.useEffect(()=>{
+        console.log("loi", test)
         setTestUndefined(test);
     },[test])
     return (
         <div>
+            { console.log("render")}
             loi
         </div>
     )

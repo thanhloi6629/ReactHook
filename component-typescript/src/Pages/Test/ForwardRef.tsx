@@ -5,17 +5,25 @@ interface RefObject {
 
 const Child = forwardRef((props: {name: string}, ref: Ref<RefObject>)=> {
     const {name} = props;  
+    console.log("ref", ref);
     useImperativeHandle(ref, () => ({ SayHi }));
     function SayHi() { 
         console.log("Hello " + name);
 
     }
-    return <div>{name}</div>;
+    return (
+      <div>
+        {console.log("loideptrai")}
+        {name}
+      </div>
+    )
+     
 });
 
 const ForwardRef = () =>{
     const ref = useRef<RefObject>(null);
-    const onButtonClick = () => {
+    const onButtonClick = (e: any) => {
+      console.log("e", e);
       if (ref.current) {
         ref.current.SayHi();
       }
