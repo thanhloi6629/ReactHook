@@ -23,6 +23,7 @@ export default function QuickFilteringGrid() {
     () => data.columns.filter((column: any) => VISIBLE_FIELDS.includes(column.field)),
     [data.columns],
   );
+  console.log("columns2", columns);
 
   return (
     <Box sx={{ height: 700, width: 1 }}>
