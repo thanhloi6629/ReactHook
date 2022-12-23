@@ -4,6 +4,7 @@ import BpIcon from 'components/atoms/checkbox/BPIcon';
 import BpCheckedIcon from 'components/atoms/checkbox/BpCheckedIcon';
 /* eslint-disable import/named */
 import { SxProps } from '@mui/system';
+import { formattedValues } from 'utils/format';
 export interface IItemAutoComplete {
   key: string;
   value: string;
@@ -49,22 +50,8 @@ const AutocompleteAllStateOptimize: React.FC<{
 
 
   useEffect(() => {
-    console.log("mappedValues", mappedValues);
-    const convertKeyValue = () => {
-      let key: any;
-      mappedValues?.map((item: any) => {
-        key = Object.keys(item);
-      });
-      const arrConverted = mappedValues.reduce((arr: any, item: any) => {
-        return [...arr, { key: item[`${key[0]}`], value: item[`${key[1]}`] }];
-      }, [{ key: 'all', value: 'Tất cả' }]);
-      return arrConverted
-    };
-    const mapped = convertKeyValue();
-    // if(mappedValues.length){
-    //   const b = mappedValues.unshift({ key: 'all', value: 'Tất cả' }) as IItemAutoComplete[];
-    //   setValues(b);
-    // }
+    const mapped = formattedValues(mappedValues);
+    setValues(mapped);
   }, [mappedValues]);
 
   const filterOptions = createFilterOptions({

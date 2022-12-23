@@ -18,7 +18,7 @@ const AutocompletePage = () => {
   const [departmentsOptimize, setDepartmentsOptimize] = useState<DdlDepartment[]>([{departmentID: 'LV50161', departmentName: 'Hành chính'}]);
 
 
-  console.log({departments});
+
 
   return (
     <>
