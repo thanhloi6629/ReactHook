@@ -13,7 +13,7 @@ export default function QuickFilteringGrid() {
   const { data } = useDemoData({
     dataSet: 'Employee',
     visibleFields: VISIBLE_FIELDS,
-    rowLength: 100,
+    rowLength: 10,
   });
 
   console.log("data.columns", data.columns);
@@ -151,6 +151,7 @@ export default function QuickFilteringGrid() {
   ]
   return (
     <Box sx={{ height: 700, width: 1 }}>
+      <h1>QickFilterGrid</h1>
       <DataGrid
         {...data}
         disableColumnFilter

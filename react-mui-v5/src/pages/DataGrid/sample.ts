@@ -132,6 +132,19 @@ const listMember = [
           email: "CND@gmail.com",
           surveyObject360: "Cấp trên",
           statusName: ""
+        },
+        {
+          orders: 11,
+          staffID: "0000010",
+          staffName: "Chu Nguyên Danh 2",
+          positionName: "Quản Lý",
+          levelName: "02",
+          unitName: "OPS",
+          departmentName: "NS",
+          phone: "0123456789",
+          email: "CND@gmail.com",
+          surveyObject360: "Cấp trên",
+          statusName: ""
         }
       ]
     }
@@ -266,6 +279,20 @@ const listMember = [
         },
         {
           id: 10,
+          orders: 10,
+          staffID: "0000010",
+          staffName: "Chu Nguyên Danh",
+          positionName: "Quản Lý",
+          levelName: "02",
+          unitName: "OPS",
+          departmentName: "NS",
+          phone: "0123456789",
+          email: "CND@gmail.com",
+          surveyObject360: "Cấp trên",
+          statusName: ""
+        },
+        {
+          id: 11,
           orders: 10,
           staffID: "0000010",
           staffName: "Chu Nguyên Danh",

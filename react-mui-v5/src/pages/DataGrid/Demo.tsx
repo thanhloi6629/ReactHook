@@ -27,6 +27,7 @@ export default function QuickFilteringGrid() {
 
   return (
     <Box sx={{ height: 700, width: 1 }}>
+      <h2>Demo</h2>
       <DataGrid
         {...data}
         disableColumnFilter

@@ -195,9 +195,9 @@ const MemberList = () => {
     const pageCount = useGridSelector(apiRef, gridPageCountSelector);
     const [pageSize, setPageSize] = useState<number>(10);
   
-    useEffect(() => {
-      apiRef.current.setPageSize(pageSize);
-    }, []);
+    // useEffect(() => {
+    //   apiRef.current.setPageSize(pageSize);
+    // }, []);
   
     return (
       <Box sx={{ width: '100% ' }}>
@@ -250,7 +250,7 @@ const MemberList = () => {
           BaseCheckbox: ForwardCustomCheckbox,
           Pagination: CustomFooterDataGrid,
         }}
-        getRowId={(r: any) => r.staffID}
+        // getRowId={(r: any) => r.staffID}
         rows={dataTable}
         columns={surveyObject === 1 ? columnsStaffs : columnsCustomer}
         checkboxSelection
@@ -260,8 +260,8 @@ const MemberList = () => {
         rowsPerPageOptions={[10, 20, 30]}
         onSelectionModelChange={(ids) => {
           const selectedIds = new Set(ids);
-          const selectedRows = dataTable.filter((row: any) => selectedIds.has(row.staffID));
-          setSelectedData(selectedRows);
+          // const selectedRows = dataTable.filter((row: any) => selectedIds.has(row.staffID));
+          // setSelectedData(selectedRows);
         }}
       />
     </>
