@@ -66,7 +66,7 @@ const FixHeader = () => {
                     background: 'white',
                     zIndex: 900,
                   }}>
-                    Street Address
+                    
                   </TableCell>
                 <TableCell scope="header">Zip Code</TableCell>
                 <TableCell scope="header">City</TableCell>
@@ -80,17 +80,17 @@ const FixHeader = () => {
                 },
               }}
             >
-                {addresses.map((address) => (
+              {addresses.map((address) => (
               <TableRow key={address.streetAddress}>
                 <TableCell scope="row"  
-                    component="th"
-                    style={{
-                        position: 'sticky',
-                        left: 0,
-                        background: 'white',
-                        zIndex: 800,
-                        backgroundColor: 'green',
-                    }}>
+                  component="th"
+                  style={{
+                      position: 'sticky',
+                      left: 0,
+                      background: 'white',
+                      zIndex: 800,
+                      backgroundColor: 'green',
+                  }}>
                   <Stack direction="column">
                     <div>{address.streetAddress}</div>
                     <div>{address.secondaryAddress}</div>
