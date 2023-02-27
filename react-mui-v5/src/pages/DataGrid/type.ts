@@ -10,4 +10,10 @@ export interface IColumnsDataGrid {
     cellClassName?: string;
     renderCell?: (params: any) => void;
     getActions?: (params: any) => void;
-  }
+}
+export interface IRequestSearch {
+  page?: number;
+  pageSize?: number;
+  totalPage?: number;
+  totalItem?: number;
+}

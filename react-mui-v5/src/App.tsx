@@ -14,6 +14,8 @@ import Test3 from 'pages/TestRender/Test3';
 import Demo2 from 'pages/DataGrid/Demo2';
 import MemberListUser from 'pages/DataGrid/MemberListUser/MemberListUser';
 import FixHeaderColumn from 'pages/Table/FixHeaderColumn';
+import BlogLayout from 'pages/card/BlogLayout';
+import ListUser from 'pages/DataGrid/ListUser/ListUser';
 
 function App() {
   return (
@@ -33,7 +35,9 @@ function App() {
       {/* <Test2 /> */}
       {/* <Test3 /> */}
 
-      <FixHeaderColumn></FixHeaderColumn>
+  <FixHeaderColumn></FixHeaderColumn> {/* <BlogLayout></BlogLayout> */}
+  <ListUser></ListUser>
+  
 
     </div>
   );
