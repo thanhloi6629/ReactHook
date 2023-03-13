@@ -5,7 +5,7 @@ import SplitComponent from './SplitComponent'
 const Test = () => {
   return (
     <div>
-			<h2>Open console, click a button</h2>
+			<h2>Open console, click a button test 1</h2>
 			<p>Re-render should be logged on every click</p>
 
 			<FullComponent /> 

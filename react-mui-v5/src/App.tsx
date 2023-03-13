@@ -16,6 +16,7 @@ import MemberListUser from 'pages/DataGrid/MemberListUser/MemberListUser';
 import FixHeaderColumn from 'pages/Table/FixHeaderColumn';
 import BlogLayout from 'pages/card/BlogLayout';
 import ListUser from 'pages/DataGrid/ListUser/ListUser';
+import PieChartComponent from 'pages/Charts/PieChartComponent';
 
 function App() {
   return (
@@ -23,20 +24,21 @@ function App() {
      {/* <MemberList /> */}
      {/* <Demo /> */}
      {/* <Demo2></Demo2> */}
-     <QuickFilteringGrid />
-     <MemberListUser></MemberListUser>
+     {/* <QuickFilteringGrid /> */}
+     {/* <MemberListUser></MemberListUser> */}
      {/* <Grid>
         <Typography variant="h5" marginBottom={1}>
                 Phòng ban
         </Typography>
         <AutocompletePage />
      </Grid> */}
-      {/* <Test /> */}
-      {/* <Test2 /> */}
-      {/* <Test3 /> */}
+      <Test />
+      <Test2 />
+      <Test3 />
 
   <FixHeaderColumn></FixHeaderColumn> {/* <BlogLayout></BlogLayout> */}
-  <ListUser></ListUser>
+      {/* <ListUser></ListUser> */}
+      <PieChartComponent></PieChartComponent>
   
 
     </div>

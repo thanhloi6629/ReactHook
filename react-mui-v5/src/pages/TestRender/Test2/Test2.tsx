@@ -52,7 +52,7 @@ const SplitComponent = () => {
 const Test2 = () => {
   return (
     <>
-      <h2>Open console, click a button</h2>
+      <h2>Open console, click a button Test 2</h2>
       <p>Re-render should be logged on every click</p>
 
       <FullComponent />
