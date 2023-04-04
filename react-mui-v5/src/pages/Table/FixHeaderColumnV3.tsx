@@ -300,7 +300,7 @@ const FixHeader = () => {
           >
             <TableRow>
               <TableCell
-                scope="header"
+                // scope="header"
                 style={{
                   position: "sticky",
                   left: 0,
@@ -311,7 +311,7 @@ const FixHeader = () => {
                 MaNV
               </TableCell>
               <TableCell
-                scope="header"
+                // scope="header"
                 style={{
                   position: "sticky",
                   left: "88px",

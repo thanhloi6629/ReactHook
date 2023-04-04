@@ -17,6 +17,7 @@ import BlogLayout from "pages/card/BlogLayout";
 import ListUser from "pages/DataGrid/ListUser/ListUser";
 import PieChartComponent from "pages/Charts/PieChartComponent";
 import FixHeaderColumnV2 from "pages/Table/FixHeaderColumnV2";
+import CheckQuestionTable from "pages/Table/CheckQuestionTable";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
       <FixHeaderColumnV2></FixHeaderColumnV2>
       {/* <ListUser></ListUser> */}
       <PieChartComponent></PieChartComponent>
+      <CheckQuestionTable></CheckQuestionTable>
     </div>
   );
 }
