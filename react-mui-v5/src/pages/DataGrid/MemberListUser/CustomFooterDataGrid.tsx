@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { Box } from '@mui/material';
-import { GridFooterContainer, GridPagination } from '@mui/x-data-grid';
-import PaginationComponent from 'components/organismos/DataTable/Pagination';
+import React, { useEffect } from "react";
+import { Box } from "@mui/material";
+import { GridFooterContainer, GridPagination } from "@mui/x-data-grid";
+import PaginationComponent from "components/organismos/DataTable/Pagination";
 type TypePaginationComponent = {
   onChangePage?: (page: number) => void;
   onChangePageSize?: (size: number) => void;
@@ -27,16 +27,16 @@ const CustomFooterDataGrid: React.FC<TypePaginationComponent> = ({
     if (onChangePage) onChangePage(Number(pageNow));
   };
   return (
-    <Box sx={{ width: '100% ' }}>
+    <Box sx={{ width: "100% " }}>
       <GridFooterContainer
         sx={{
-          visibility: 'visible!important',
-          width: '100%!important',
-          position: 'absolute',
-          height: 'auto!important',
+          visibility: "visible!important",
+          width: "100%!important",
+          position: "absolute",
+          height: "auto!important",
           left: 0,
-          bottom: '-90px',
-          borderTop: 'none',
+          bottom: "-90px",
+          borderTop: "none",
         }}
       >
         <PaginationComponent

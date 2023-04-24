@@ -18,11 +18,13 @@ import ListUser from "pages/DataGrid/ListUser/ListUser";
 import PieChartComponent from "pages/Charts/PieChartComponent";
 import FixHeaderColumnV2 from "pages/Table/FixHeaderColumnV2";
 import CheckQuestionTable from "pages/Table/CheckQuestionTable";
+import AutoCompleteAll2 from "pages/Autocomplete/AutoCompleteAll2";
 
 function App() {
   return (
     <div className="App">
       {/* <MemberList /> */}
+      <AutoCompleteAll2></AutoCompleteAll2>
       {/* <Demo /> */}
       {/* <Demo2></Demo2> */}
       {/* <QuickFilteringGrid /> */}
@@ -33,6 +35,7 @@ function App() {
         </Typography>
         <AutocompletePage />
      </Grid> */}
+      <Box padding={5}></Box>
       <Test />
       <Test2 />
       <Test3 />
