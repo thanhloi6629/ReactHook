@@ -19,12 +19,16 @@ import PieChartComponent from "pages/Charts/PieChartComponent";
 import FixHeaderColumnV2 from "pages/Table/FixHeaderColumnV2";
 import CheckQuestionTable from "pages/Table/CheckQuestionTable";
 import AutoCompleteAll2 from "pages/Autocomplete/AutoCompleteAll2";
+import Parent from "pages/TestRender/PassingData/FromParentToChild/Parent";
+import ChildToParent from "pages/TestRender/PassingData/FromChildToParent/Parent";
+import Survey from "pages/ScrollToSection/Survey";
 
 function App() {
   return (
     <div className="App">
+      <Survey />
       {/* <MemberList /> */}
-      <AutoCompleteAll2></AutoCompleteAll2>
+      {/* <AutoCompleteAll2></AutoCompleteAll2> */}
       {/* <Demo /> */}
       {/* <Demo2></Demo2> */}
       {/* <QuickFilteringGrid /> */}
@@ -35,15 +39,17 @@ function App() {
         </Typography>
         <AutocompletePage />
      </Grid> */}
-      <Box padding={5}></Box>
-      <Test />
-      <Test2 />
+      {/* <Box padding={5}></Box> */}
+      {/* <Test /> */}
+      {/* <Test2 /> */}
       <Test3 />
       <FixHeaderColumn></FixHeaderColumn> {/* <BlogLayout></BlogLayout> */}
-      <FixHeaderColumnV2></FixHeaderColumnV2>
+      {/* <FixHeaderColumnV2></FixHeaderColumnV2> */}
       {/* <ListUser></ListUser> */}
-      <PieChartComponent></PieChartComponent>
-      <CheckQuestionTable></CheckQuestionTable>
+      {/* <PieChartComponent></PieChartComponent>
+      <CheckQuestionTable></CheckQuestionTable> */}
+      <Parent></Parent>
+      <ChildToParent></ChildToParent>
     </div>
   );
 }

@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.ref-child {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  opacity: 0.5;
+}
+.ref-child:hover {
+  opacity: 1;
+
+}
+.ref-child.active {
+  opacity: 1;
+  color: black;
+}
